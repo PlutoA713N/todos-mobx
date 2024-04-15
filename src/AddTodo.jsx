@@ -11,6 +11,8 @@ const AddTodo = ({ onAdd }) => {
     }
 
     return(
+        <>
+        {/* {JSON.stringify(text)} */}
         <form onSubmit={handleSubmit}>
             <input 
                 type='text'
@@ -20,6 +22,7 @@ const AddTodo = ({ onAdd }) => {
             />
             <button type="submit">Add Todo</button>
         </form>
+        </>
     )
 
 }

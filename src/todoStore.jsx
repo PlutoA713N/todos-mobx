@@ -3,17 +3,17 @@ import { observable, action } from "mobx";
 const todoStore = observable({
     todos: [],
 
-    addTodo: action((todoText) => {
+    addTodo: action(function(todoText) {
         this.todos.push({text: todoText, completed: false})
     }),
 
-    toggleTodo: action((todo) => {
+    toggleTodo: action(function(todo) {
         todo.completed = !todo.completed
     }),
 
-    deleteTodo: action((todo) => {
+    deleteTodo: action(function(todo) {
         this.todos.remove(todo)
     })
 })
 
-export default todoStore
+export default todoStore;
